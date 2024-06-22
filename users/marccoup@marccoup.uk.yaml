@@ -2,3 +2,7 @@ name: 'Marc Coupland'
 super: true
 id: 59b91ae0-a15e-42d3-ae08-b3488969c8dd
 password_hash: $2y$12$CZVdKXafKyqCRU0DdXD81ePo0XedfAOnL.bDCLHec9HkgtOOp6vQy
+preferences:
+  collections:
+    articles:
+      after_save: continue_editing

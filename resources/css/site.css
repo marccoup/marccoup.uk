@@ -3,3 +3,13 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
+@import url(https://fonts.bunny.net/css?family=comic-neue:400,400i,700,700i);
+
+@font-face {
+    font-family: 'extra_mileregular';
+    src: url('/resources/fonts/extra_mile-webfont.woff2') format('woff2'),
+    url('/resources/fonts/extra_mile-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
