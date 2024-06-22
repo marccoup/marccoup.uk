@@ -53,6 +53,9 @@ jobs:
         run: php artisan key:generate 
       - name: Build with Statamic SSG
         run: php please ssg:generate
+        env:
+          APP_URL: https://marccoup.uk
+          APP_NAME: "Marc Coupland"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
