@@ -39,7 +39,7 @@ jobs:
           curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/new-age/WebFont/new_age-webfont.woff -o resources/fonts/new_age-webfont.woff
           curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/new-age/WebFont/new_age-webfont.woff2 -o resources/fonts/new_age-webfont.woff2
         env:
-          FONT_TOKEN: ${{ secrets.font_token }}
+          FONT_TOKEN: ${{ secrets.FONT_TOKEN }}
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
