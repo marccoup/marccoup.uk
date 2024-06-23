@@ -8,26 +8,58 @@
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="bg-raffia font-comicneue leading-normal text-woodsmoke">
+    <div
+        class="
+            hidden sm:block
+            w-[50vw]
+            bg-woodsmoke
+            fixed top-0 right-0 bottom-0 -z-50"
+    ></div>
+    <div class="fixed top-0 right-0 bottom-0 sm:left-0 -z-50 flex justify-center">
         <div
             class="
-            bg-casablanca left-[95vw] sm:left-[90vw] md:left-[75vw] lg:left-[30vw]
-            fixed top-0 -bottom-[150px] -right-[100px] -skew-x-12 -z-50"
+            h-[100vh]
+            ml-[40px] w-[20px]
+            sm:ml-0
+            sm:mr-[198px] sm:w-[100px]
+            md:mr-[298px] md:w-[150px]
+            2xl:mr-[398px] 2xl:w-[200px]
+            bg-casablanca
+            shadow-2xl
+            fixed top-0 -z-50 -skew-x-12"
         ></div>
         <div
             class="
-            bg-gold-drop left-[100vw] sm:left-[95vw] md:left-[80vw] lg:left-[40vw]
-            fixed top-0 -bottom-[150px] -right-[100px] -skew-x-12 -z-50"
+            h-[100vh]
+            ml-[78px] w-[20px]
+            sm:ml-0  sm:w-[100px]
+            md:w-[150px]
+            2xl:w-[200px]
+            bg-gold-drop
+            shadow-2xl
+            fixed top-0 -z-50 -skew-x-12"
         ></div>
         <div
             class="
-            bg-punch left-[105vw] sm:left-[100vw] md:left-[85vw] lg:left-[50vw]
-            fixed top-0 -bottom-[150px] -right-[100px] -skew-x-12 -z-50"
+            h-[100vh]
+            ml-[118px] w-[20px]
+            sm:ml-[198px] sm:w-[100px]
+            md:ml-[298px] md:w-[150px]
+            2xl:ml-[398px] 2xl:w-[200px]
+            bg-punch
+            shadow-2xl
+            fixed top-0 -z-50 -skew-x-12"
         ></div>
         <div
             class="
-            bg-woodsmoke left-[110vw] sm:left-[105vw] md:left-[90vw] lg:left-[60vw]
-            fixed top-0 -bottom-[150px] -right-[100px] -skew-x-12 -z-50"
+            h-[100vh]
+            ml-[158px] w-[20px]
+            sm:hidden
+            bg-woodsmoke
+            shadow-2xl
+            fixed top-0 -z-50 -skew-x-12"
         ></div>
+    </div>
         {{ template_content }}
     </body>
 </html>
