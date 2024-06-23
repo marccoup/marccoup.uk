@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
+use Statamic\StaticSite\SSG;
 
 class AppServiceProvider extends ServiceProvider
 {

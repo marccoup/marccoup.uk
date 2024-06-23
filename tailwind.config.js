@@ -18,7 +18,7 @@ export default {
             },
             fontFamily: {
                 extramile: ['extra_mileregular', 'sans-serif'],
-                comicneue: ['Comic Neue', 'sans-serif']
+                newage: ['new_ageregular', 'sans-serif']
             },
             typography: ({ theme }) => ({
                 DEFAULT: {
