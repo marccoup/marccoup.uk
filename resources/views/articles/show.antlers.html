@@ -1,8 +1,10 @@
-<h1 class="font-extramile text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
-    {{ title }}
-</h1>
+<div class="mx-auto px-2 overflow-hidden min-h-screen flex flex-col items-center container py-4">
+    <h1 class="font-extramile text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
+        {{ title }}
+    </h1>
 
 
-<div class="max-w-xl prose prose-stone prose-lg">
-    {{ content | widont }}
+    <div class="max-w-[60vw] lg:max-w-2xl prose prose-lg mb-10">
+        {{ content | widont }}
+    </div>
 </div>

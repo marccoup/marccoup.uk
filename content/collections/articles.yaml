@@ -1,6 +1,6 @@
 title: Articles
 template: articles/show
-layout: layout
+layout: content-layout
 mount: 57cf6a07-272e-41e1-be2c-ae1267f707a7
 revisions: false
 route: 'articles/{slug}'

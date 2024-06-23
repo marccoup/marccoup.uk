@@ -1,16 +1,18 @@
-<h1 class="font-extramile text-5xl md:text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
-    Articles
-</h1>
+<div class="mx-auto px-2 overflow-hidden min-h-screen flex flex-col items-center container py-4">
+    <h1 class="font-extramile text-5xl md:text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
+        Articles
+    </h1>
 
-{{ collection:articles }}
-    <a
-        class="
+    {{ collection:articles }}
+        <a
+            class="
         my-5 py-2 px-4 bg-woodsmoke text-casablanca font-extramile
         text-center
         text-2xl md:text-3xl
         {{ index % 2 === 0 ? 'skew-x-12' : '-skew-x-12' }}
-            {{ index % 3 === 0 ? 'skew-y-3' : '-skew-y-3' }}
+                {{ index % 3 === 0 ? 'skew-y-3' : '-skew-y-3' }}
 "
-        href="{{ url }}"
-    >{{ title }}</a>
-{{ /collection:articles }}
+            href="{{ url }}"
+        >{{ title }}</a>
+    {{ /collection:articles }}
+</div>

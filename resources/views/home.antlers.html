@@ -1,16 +1,69 @@
-<h1 class="font-extramile text-5xl md:text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
-    Articles
-</h1>
+<div class="mx-auto px-2 min-h-screen flex flex-col container py-4">
+    <div class="flex gap-8 md:gap-16 flex-col-reverse md:flex-row md:mt-8">
+        <div class="grow max-w-[80vw] md:max-w-none md:w-2/3">
+            <h1 class="font-extramile text-6xl md:text-8xl font-bold mt-4 md:mt-8 mb-4">Marc Coupland</h1>
+            <div>(That's me)</div>
+            <div>
+                Find me everywhere as <span class="italic">marccoup</span>. Sometimes it has prepended underscores!
+            </div>
+        </div>
 
-{{ collection:articles }}
-    <a
-        class="
-        my-5 py-2 px-4 bg-woodsmoke text-casablanca font-extramile
-        text-center
-        text-2xl md:text-3xl
-        {{ index % 2 === 0 ? 'skew-x-12' : '-skew-x-12' }}
-            {{ index % 3 === 0 ? 'skew-y-3' : '-skew-y-3' }}
-"
-        href="{{ url }}"
-    >{{ title }}</a>
-{{ /collection:articles }}
+        <div class="md:w-1/3 flex justify-center">
+            <div class="rounded-full overflow-hidden shadow-xl shadow-casablanca max-w-sm md:max-w-md relative">
+                <img
+                    class="w-full"
+                    src="{{ brand:portrait }}"
+                    alt="{{ brand:portrait.alt }}"
+                />
+
+                <div
+                    class="absolute top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-end pb-7">
+                    <div class="font-extramile text-4xl text-center text-casablanca -skew-y-6">
+                        This is me!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 md:mt-0 max-w-[80vw] lg:max-w-[48vw]">
+        <h2 class="font-bold text-xl">Stuff I do</h2>
+
+        <ul class="space-y-1 mt-1">
+            <li class="flex items-center gap-2">
+                {{ svg src="icons/grunge-circle-5" class="text-punch w-3" }}
+                <span>
+                    Build <span class="italic">incredible</span> web apps at
+                <a
+                    class="text-punch font-bold italic underline hover:opacity-75"
+                    href="https://vibeagency.uk"
+                    target="_blank"
+                >Vibe Agency</a>
+                </span>
+            </li>
+            <li class="flex items-center gap-2">
+                {{ svg src="icons/grunge-circle-5" class="text-punch w-3" }}
+                <span>Ride motorcycles!</span>
+            </li>
+            <li class="flex items-center gap-2">
+                {{ svg src="icons/grunge-circle-5" class="text-punch w-3" }}
+
+                <span>
+                    Write
+                "<a
+                    class="inline text-punch font-bold italic underline hover:opacity-75"
+                    href="{{ link to="articles" absolute="true" }}"
+                >Articles</a>"
+                </span>
+            </li>
+            <li class="flex items-center gap-2">
+                {{ svg src="icons/grunge-circle-5" class="text-punch w-3" }}
+
+                <span>
+                        Rebuild this site once a year
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</div>

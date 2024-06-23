@@ -39,7 +39,8 @@ return [
     */
 
     'copy' => [
-        public_path('build') => 'build',
+        public_path('build')  => 'build',
+        public_path('assets') => 'assets',
     ],
 
     'symlinks' => [
@@ -99,7 +100,7 @@ return [
 
     'glide' => [
         'directory' => 'img',
-        'override' => true,
+        'override'  => true,
     ],
 
     /*
