@@ -1,3 +1,12 @@
+{{ push:flavour }}
+<div
+    class="w-full h-full bg-cover bg-right bg-no-repeat relative flex flex-col justify-start items-end p-4"
+    title="{{ brand:flavour.alt }}"
+    style="background-image: url('{{ brand:flavour }}')"
+>
+    <div class="absolute top-0 right-0 bottom-0 left-0 bg-woodsmoke opacity-15"></div>
+</div>
+{{ /push:flavour }}
 <div class="mx-auto px-2 overflow-hidden min-h-screen flex flex-col items-center container py-4">
     <div class="
         my-2 w-full text-left
@@ -5,13 +14,28 @@
     ">
         <a
             class="
-                text-punch font-extramile text-4xl hover:opacity-75 transition ease-in-out
+                inline-block
+                shadow-2xl
+                py-2 px-4 bg-woodsmoke text-casablanca font-extramile
+                text-center
+                text-2xl md:text-3xl
+                skew-x-12
+                skew-y-3
+                hover:scale-110 hover:-skew-x-6
+                focus:scale-110 focus:-skew-x-6
+                transition ease-in-out
             "
             href="{{ site:permalink }}"
         ><< home time?</a>
     </div>
 
-    <h1 class="font-extramile text-5xl md:text-6xl font-bold mt-4 mb-8 max-w-2xl text-center">
+    <h1
+        class="
+            bg-gold-drop px-1 skew-x-6 -skew-y-3 shadow
+            md:bg-transparent md:shadow-none
+            font-extramile text-5xl md:text-6xl font-bold mt-4 mb-8 max-w-2xl text-center
+        "
+    >
         Articles
     </h1>
 

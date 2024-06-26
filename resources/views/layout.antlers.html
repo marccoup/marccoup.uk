@@ -9,12 +9,28 @@
     </head>
     <body class="bg-raffia font-newage leading-normal text-woodsmoke">
         <div
-        class="
-            hidden sm:block
-            w-[50vw]
-            bg-woodsmoke
-            fixed top-0 right-0 bottom-0 -z-50"
-        ></div>
+            class="
+                w-full sm:w-[50vw]
+                bg-raffia
+                fixed top-0 left-0 bottom-0 -z-50
+            "
+        >{{ stack:flavour }}</div>
+        <div
+            class="
+                hidden sm:block
+                w-[50vw]
+                bg-woodsmoke
+                fixed top-0 right-0 bottom-0 -z-50
+            "
+        >
+            <div
+                class="w-full h-full bg-cover bg-left bg-no-repeat relative flex flex-col justify-start items-end p-4"
+                title="{{ brand:portrait.alt }}"
+                style="background-image: url('{{ brand:portrait }}')"
+            >
+                <div class="absolute top-0 right-0 bottom-0 left-0 bg-woodsmoke opacity-15"></div>
+            </div>
+        </div>
         <div class="fixed top-0 right-0 bottom-0 sm:left-0 -z-50 flex justify-center">
         <div
             class="
@@ -60,7 +76,6 @@
             fixed top-0 -z-50 -skew-x-12"
         ></div>
     </div>
-
         {{ template_content }}
     </body>
 </html>

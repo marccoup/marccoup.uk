@@ -13,3 +13,12 @@ tabs:
               folder: images
               type: assets
               display: Portrait
+          -
+            handle: flavour
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              folder: images
+              type: assets
+              display: flavour
