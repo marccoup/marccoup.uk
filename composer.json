@@ -1,16 +1,11 @@
 {
-    "name": "statamic/statamic",
+    "name": "marccoup/marccoup.uk",
     "type": "project",
     "description": "Statamic",
-    "keywords": [
-        "statamic",
-        "cms",
-        "flat file",
-        "laravel"
-    ],
+    "keywords": [],
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^11",
+        "php": "^8.4",
+        "laravel/framework": "^12",
         "laravel/tinker": "^2.9",
         "spatie/fork": "^1.2",
         "statamic/cms": "^5.0",
