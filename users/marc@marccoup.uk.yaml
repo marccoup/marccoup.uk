@@ -6,3 +6,5 @@ preferences:
   collections:
     articles:
       after_save: continue_editing
+  start_page: collections/articles
+  favorites: {  }
