@@ -32,42 +32,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Load fonts
-        run: |
-          curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/extra-mile/WebFont/extra_mile-webfont.woff -o resources/fonts/extra_mile-webfont.woff
-          curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/extra-mile/WebFont/extra_mile-webfont.woff2 -o resources/fonts/extra_mile-webfont.woff2
-          curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/new-age/WebFont/new_age-webfont.woff -o resources/fonts/new_age-webfont.woff
-          curl -H "Authorization: token ${FONT_TOKEN}" https://raw.githubusercontent.com/marccoup/fonts/main/new-age/WebFont/new_age-webfont.woff2 -o resources/fonts/new_age-webfont.woff2
-        env:
-          FONT_TOKEN: ${{ secrets.FONT_TOKEN }}
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-      - name: Install dependencies
-        run: npm install
-      - name: Build resources
-        run: npm run build
       - name: Setup PHP & composer
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
           tools: composer
-      - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-      - name: Generate key
-        run: php artisan key:generate 
-      - name: Build with Statamic SSG
-        run: php please ssg:generate
-        env:
-          APP_URL: https://marccoup.uk
-          APP_NAME: "Marc Coupland"
+      - name: Build
+        run: php build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./storage/app/static
+          path: ./public
 
   # Deployment job
   deploy:
