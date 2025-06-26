@@ -1,4 +1,4 @@
-name: Deploy Statamic SSG site to Pages
+name: Deploy custom SSG site to Pages
 
 on:
   # Runs on pushes targeting the default branch
