@@ -7,13 +7,9 @@
 $allArticles ??= [];
 ?>
 <main>
-    <header>
-        <h1>Marcus Coupland</h1>
-        <p>Blog version &infin;</p>
-    </header>
-
     <section class="articles">
-        <h2>Articles</h2>
+        <h2>Departures</h2>
+        <div><small>(from my brain)</small></div>
 
         <?php if (empty($allArticles)): ?>
             <p>No articles were found.</p>

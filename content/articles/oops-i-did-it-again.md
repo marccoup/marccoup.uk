@@ -2,6 +2,7 @@
 title: 'Oops I did it again'
 author: 'Marc Coupland'
 date: '2025-06-26'
+updated_at: 1750899230 
 ---
 
 ## A new site!
@@ -35,3 +36,7 @@ I'll redesign this site again, but this time before the year is out. I like the 
 Sorry, I'm not my usual witty self that you're all so used to — it's 1:16am, and I am just so tired.
 
 Why do I do this to myself? I would love to know, please email me!
+
+## I came back (Update)
+
+Go read about the [railway version!](/articles/oops-i-did-it-again-again)

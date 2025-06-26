@@ -6,48 +6,34 @@ $date      ??= '';
 $updatedAt ??= '';
 ?>
 <main>
-    <article>
-        <nav class="article-navigation">
-            <a href="/" class="articles-link">← All Articles</a>
-        </nav>
-
+    <article class="article-content board-panel">
         <header>
-            <h1><?= htmlspecialchars($title) ?></h1>
+            <h1 class="split-flap"><?= htmlspecialchars($title) ?></h1>
             <div class="article-meta">
+                <div>
+                    <time datetime="<?= date('c', strtotime($date)) ?>">
+                        DEPARTURE: <?= date('d/m/Y H:i T', strtotime($date)) ?>
+                    </time>
+                </div>
                 <?php if (!empty($author)): ?>
-                    <address class="author">
-                        By <span rel="author"><?= htmlspecialchars($author) ?></span>
-                    </address>
-                <?php endif; ?>
-
-                <?php if (!empty($date)): ?>
-                    <div class="published-date">
-                        Published:
-                        <time datetime="<?= htmlspecialchars($date) ?>">
-                            <?= date('F j, Y', strtotime($date)) ?>
-                        </time>
+                    <div class="author">
+                        CONDUCTOR: <span><?= htmlspecialchars($author) ?></span>
                     </div>
                 <?php endif; ?>
-
                 <?php if (!empty($updatedAt) && $updatedAt != $date): ?>
-                    <div class="updated-date">
-                        Updated:
-                        <time datetime="<?= date('Y-m-d', $updatedAt) ?>">
-                            <?= date('F j, Y', $updatedAt) ?>
-                        </time>
+                    <div>
+                        <small>REVISED: <?= date('d/m/Y H:i T', $updatedAt) ?></small>
                     </div>
                 <?php endif; ?>
             </div>
         </header>
 
-        <section class="article-content">
+        <div class="matrix-text">
             <?= $content ?>
-        </section>
-
-        <footer>
-            <nav class="article-navigation">
-                <a href="/" class="articles-link">← All Articles</a>
-            </nav>
-        </footer>
+        </div>
     </article>
+
+    <div class="back-link">
+        <a href="/" class="articles-link">← RETURN TO DEPARTURES</a>
+    </div>
 </main>
