@@ -8,15 +8,17 @@ $allArticles ??= [];
 ?>
 <main>
     <section class="articles">
-        <h2>Departures</h2>
-        <div><small>(from my brain)</small></div>
+        <h2>Articles</h2>
 
-        <?php if (empty($allArticles)): ?>
-            <p>No articles were found.</p>
-        <?php else: ?>
-            <ul class="article-list">
+        <?php if (!empty($allArticles)): ?>
+            <div class="search-container">
+                <input type="text" id="article-search" placeholder="Search articles..." aria-label="Search articles">
+                <div id="search-results-count"></div>
+            </div>
+
+            <ul class="article-list" id="article-list">
                 <?php foreach ($allArticles as $article): ?>
-                    <li>
+                    <li class="article-item" data-title="<?= htmlspecialchars(strtolower($article['title'])) ?>">
                         <a href="/articles/<?= htmlspecialchars($article['slug']) ?>/" class="article-link">
                             <article>
                                 <header>
@@ -45,6 +47,46 @@ $allArticles ??= [];
                     </li>
                 <?php endforeach; ?>
             </ul>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchInput = document.getElementById('article-search');
+                    const articleItems = document.querySelectorAll('.article-item');
+                    const resultCount = document.getElementById('search-results-count');
+                    const totalArticles = articleItems.length;
+                    
+                    // Show initial count
+                    updateResultCount(totalArticles);
+                    
+                    searchInput.addEventListener('input', function() {
+                        const query = this.value.trim().toLowerCase();
+                        let visibleCount = 0;
+                        
+                        articleItems.forEach(item => {
+                            const title = item.getAttribute('data-title');
+                            const isMatch = title.includes(query);
+                            
+                            item.style.display = isMatch ? 'block' : 'none';
+                            
+                            if (isMatch) {
+                                visibleCount++;
+                            }
+                        });
+                        
+                        updateResultCount(visibleCount);
+                    });
+                    
+                    function updateResultCount(count) {
+                        if (count === totalArticles) {
+                            resultCount.textContent = '';
+                        } else {
+                            resultCount.textContent = `Showing ${count} of ${totalArticles} articles`;
+                        }
+                    }
+                });
+            </script>
+        <?php else: ?>
+            <p>No articles were found.</p>
         <?php endif; ?>
     </section>
 </main>

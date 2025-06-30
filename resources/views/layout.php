@@ -11,47 +11,18 @@ $content ??= '';
     <title><?= $title ?></title>
 </head>
 <body>
-    <header class="board-panel">
-        <div class="site-title split-flap">MARC COUPLAND</div>
-        <div class="site-subtitle">PERSONAL RAILWAY OF THOUGHTS</div>
-        <div class="display-time" id="clock">--:--:--</div>
+    <header>
+        <div class="site-title">Marc Coupland</div>
+        <div class="site-subtitle">Rolling release</div>
         <nav>
-            <a href="/" class="matrix-text">DEPARTURES</a>
+            <a href="/">Articles</a>
         </nav>
     </header>
     <main>
         <?= $content ?>
     </main>
     <footer class="board-panel">
-        <p>PLATFORM &copy; <?= date('Y') ?> - MARC COUPLAND</p>
+        <p>&copy; Now - Marc Coupland</p>
     </footer>
-    
-    <script>
-        // Add railway board clock functionality
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        
-        // Update the clock every second
-        setInterval(updateClock, 1000);
-        updateClock(); // Initial call
-        
-        // Add split-flap animation to elements when they appear in view
-        document.addEventListener('DOMContentLoaded', function() {
-            // Apply random flicker effect to elements
-            const elements = document.querySelectorAll('h1, h2, h3, .site-title, .article-list li');
-            elements.forEach(el => {
-                el.classList.add('flicker');
-                // Add slight delay for staggered effect
-                setTimeout(() => {
-                    el.classList.add('split-flap');
-                }, Math.random() * 1000);
-            });
-        });
-    </script>
 </body>
 </html>

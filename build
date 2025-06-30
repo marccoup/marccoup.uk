@@ -5,6 +5,15 @@ use MatthiasMullie\Minify\CSS;
 
 include __DIR__.'/vendor/autoload.php';
 
+function isProduction(): string
+{
+    $shortOptions = "P";
+    $longOptions  = ["production", "prod"];
+    $options      = getopt($shortOptions, $longOptions);
+
+    return isset($options["P"]) || isset($options["production"]) || isset($options["prod"]);
+}
+
 function resetBuild(): void
 {
     $dir = __DIR__;
@@ -50,13 +59,13 @@ function assetGroup(string $group): void
     }
 }
 
-function articles(): array
+function articles(bool $isProduction): array
 {
     // Get all Markdown files in the content/articles directory
     $articleFiles = glob('content/articles/*.md');
 
     // Array to store all article metadata
-    $allArticles = [];
+    $published = [];
 
     // Process each article file
     foreach ($articleFiles as $articleFile) {
@@ -89,7 +98,12 @@ function articles(): array
         $author    = $frontMatter['author'] ?? 'Unknown';
         $date      = $frontMatter['date'] ?? '';
         $updatedAt = $frontMatter['updated_at'] ?? '';
+        $isDraft   = $frontMatter['draft'] ?? false;
         $content   = $htmlContent;
+
+        if ($isDraft) {
+            $title = "[DRAFT] {$title}";
+        }
 
         // Extract a short excerpt from the HTML content
         $excerpt = '';
@@ -100,15 +114,17 @@ function articles(): array
             }
         }
 
-        // Add article metadata to the array
-        $allArticles[] = [
-            'title'      => $title,
-            'author'     => $author,
-            'date'       => $date,
-            'updated_at' => $updatedAt,
-            'slug'       => $baseFilename,
-            'excerpt'    => $excerpt,
-        ];
+        if (!$isDraft || !$isProduction) {
+            // Add article metadata to the array
+            $published[] = [
+                'title'      => $title,
+                'author'     => $author,
+                'date'       => $date,
+                'updated_at' => $updatedAt,
+                'slug'       => $baseFilename,
+                'excerpt'    => $excerpt,
+            ];
+        }
 
         ob_start();
         include __DIR__.'/resources/views/articles/article.php';
@@ -126,12 +142,12 @@ function articles(): array
     }
 
     // Sort articles by date (newest first)
-    usort($allArticles, function ($a, $b) {
+    usort($published, function ($a, $b) {
         return strtotime($b['date']) <=> strtotime($a['date']);
     });
 
     // Return the article metadata for use elsewhere
-    return $allArticles;
+    return $published;
 }
 
 function homepage(array $allArticles): void
@@ -151,7 +167,14 @@ function homepage(array $allArticles): void
     file_put_contents('public/index.html', $html);
 }
 
-resetBuild();
-assets();
-$allArticles = articles();
-homepage($allArticles);
+function main(): void
+{
+    $isProduction = isProduction();
+
+    resetBuild();
+    assets();
+    $published = articles($isProduction);
+    homepage($published);
+}
+
+main();
