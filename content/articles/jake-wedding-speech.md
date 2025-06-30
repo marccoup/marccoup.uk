@@ -27,7 +27,7 @@ can sometimes just take over.
 
 So, it's year 6 at school, 2007 (I think), we're the big age of 11. Neither of us has managed to shake the other one off 
 yet, often just the case of the blind following the blind if I'm honest with you. The SATs are in full swing, worst 
-thing ever we thought at the time, such a stressful stressful time. We've got an exam that day, Jake and I are stood 
+thing ever we thought at the time, such a stressful time. We've got an exam that day, Jake and I are stood 
 outside the classroom waiting patiently to be called in and eventually we are. I take my seat, ready to go. Jake on the
 other hand seems to be, I don't know? Having a wander around? Actively circling the room like a dog spinning before it 
 sits, which he eventually does. Now these are words paraphrased and de-lorry-driver-languaged from Jake himself, 
@@ -39,6 +39,15 @@ still has to this day, for better or worse), he proudly announces his presence, 
 it had been his plan all along. I don't know if he passed the exam, the one he was meant to take or the one he wasn't.
 Nevertheless, as funny as I personally find it - I do think it represents his character quite well, any challenge he is 
 presented with, expected or unexpected, easy or hard - he faces it head on without hesitation.
+
+There are so many examples I can think of where Jake was the one to deal with a situation or jump to the defence of 
+another when we were growing up that I struggled to keep this speech short - I felt like each and every example was worth
+mentioning, but there simply isn't time. It's funny but I remember at junior school, the toilet got blocked in the boys 
+and Jake was the one to fix it (this was somewhere between meeting me and doing the wrong exam) as a kid! 
+The adults weren't doing anything, so he just dealt with it! I remember at the wooden park when we would have been about
+13, these "big kids" starting to cause trouble, and Jake gets up from where we're all sitting and marches over and puts 
+a stop to it, not a second thought; they were definitely older and bigger than all of us but he didn't have a care. He 
+would front out an army I'm sure. These sorts of actions are indicative of who he is and always has been.
 
 If I was asked to sum Jake up in 3 words, I would say it couldn't be done, then I would say, "Full of love". 
 Because every action this man takes is spurred by his love whether he realises it or not; For his family he would do 
@@ -57,4 +66,5 @@ Please everybody raise your glass and drink to the continued health and happines
 
 ---
 
-Last note, before I hand you back to your toastmaster general, if you would like some embarrassing stories about Jake please feel free to approach me privately later once I've had a few more drinks!
+Last note, before I hand you back to your toastmaster general, if you would like some embarrassing stories about Jake
+please feel free to approach me privately later once I've had a few more drinks!
