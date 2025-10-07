@@ -1,0 +1,129 @@
+@import url(https://fonts.bunny.net/css?family=quicksand:400,600);
+
+:root {
+    --muted: #5F5E5E;
+    --link: #1675D9;
+    --accent-green: #739B79;
+    --vibe-agency-cyan: #32e4cb;
+    --vibe-agency-dark: #00004d;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #E0E4DC;
+        --text: #2E2C2F;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #2E2C2F;
+        --text: #E0E4DC;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    display: grid;
+    place-items: start center;
+    padding: 2rem;
+}
+
+.site-header, .site-footer, .content {
+    width: min(990px, 100%);
+}
+
+.site-header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    line-height: normal;
+    font-weight: normal;
+    color: var(--accent-green);
+}
+
+@media (min-width: 768px) {
+    .site-header h1 {
+        margin: 2rem 0 1rem 0;
+        font-size: 3rem;
+    }
+}
+
+strong {
+    font-weight: 600;
+}
+
+.content {
+    padding: 0;
+}
+
+.content .list {
+    list-style-type: '// ';
+    padding-left: 15px;
+}
+
+.content .list .list {
+    padding-left: 20px;
+}
+
+.content .list li {
+    font-size: 1.125rem;
+    margin: 1rem 0;
+    padding-left: 5px;
+}
+
+.content .list li::marker {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.site-footer {
+    margin-top: 1.25rem;
+    color: var(--muted);
+}
+
+a.vibe-agency {
+    margin-left: 2px;
+    display: inline-block;
+    background: var(--vibe-agency-cyan) !important;
+    color: var(--vibe-agency-dark) !important;
+    padding: 0 5px;
+    transform: skew(-10deg);
+
+    span {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 2px;
+        transform: rotate(-1deg);
+    }
+
+    &:hover, &:focus {
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}
