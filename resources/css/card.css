@@ -1,0 +1,126 @@
+@import "open-props/masks/corner-cuts";
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-8);
+
+    &.home {
+        margin-top: 70px;
+    }
+}
+
+.card {
+    background-image: var(--card-background-image);
+    box-shadow: var(--shadow-2);
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+    border: var(--border-size-3) solid;
+    max-width: 800px;
+
+    &:nth-of-type(odd) {
+        border-radius: var(--radius-drawn-4);
+    }
+
+    &:nth-of-type(even) {
+        border-radius: var(--radius-drawn-3);
+    }
+
+    .card-meta {
+        display: flex;
+        padding: var(--size-4) var(--size-4) 0;
+        gap: var(--size-3);
+        align-items: center;
+        /* justify-content: space-between; */
+        margin-bottom: var(--size-4);
+        font-size: var(--font-size-3);
+        line-height: var(--font-lineheight-0);
+
+        >* {
+            line-height: var(--font-lineheight-0);
+        }
+
+        a {
+            transition: all 0.1s ease-in-out;
+            display: block;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.2) skew(5deg, -5deg);
+            }
+        }
+
+        .type {
+            display: flex;
+            align-items: center;
+            gap: var(--size-1);
+
+            svg {
+                width: var(--size-5);
+            }
+
+            span {
+                line-height: var(--font-lineheight-1);
+            }
+        }
+    }
+
+    .post-title {
+        margin-bottom: var(--size-3);
+    }
+
+    p,
+    ul,
+    ol,
+    dl,
+    h6 {
+        font-size: var(--font-size-3);
+    }
+
+    p {
+        margin: var(--size-2) 0;
+    }
+
+    .content {
+        padding: 0 var(--size-4) var(--size-4);
+
+    }
+
+    .caption {
+        border-top: var(--border-size-3) solid var(--text-base);
+        padding: var(--size-3) var(--size-4) var(--size-6);
+    }
+}
+
+.card-quote {
+
+    blockquote {
+        border-left: var(--border-size-3) solid;
+        border-radius: var(--radius-drawn-4);
+        font-size: var(--font-size-5);
+
+        p {
+            margin: 0;
+            font-size: var(--font-size-5);
+        }
+
+        cite {
+            font-size: var(--font-size-2);
+        }
+    }
+}
+
+.card-link {
+
+    .og-image {
+        display: block;
+        width: 100%;
+    }
+
+    h2 {
+        margin-top: var(--size-2);
+        font-size: var(--font-size-3);
+        max-inline-size: unset;
+    }
+}

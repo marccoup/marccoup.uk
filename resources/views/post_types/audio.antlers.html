@@ -1,0 +1,12 @@
+<section>
+    {{ if current_template != "default" }}
+        <h2 class="post-title"><a href="{{ url }}">{{ title }}</a></h2>
+    {{ /if }}
+    {{ audio }}
+        <audio controls class="audio">
+            <source src="{{ url }}">
+        </audio>
+    {{ /audio }}
+
+    {{ content }}
+</section>

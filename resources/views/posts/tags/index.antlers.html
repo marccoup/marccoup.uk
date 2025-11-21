@@ -1,0 +1,13 @@
+<section class="page-header">
+    <h1 class="page-title">Tags</h1>
+</section>
+
+<section>
+    <ul class="tags-list">
+        {{ tags sort="title" }}
+            <li>
+                <a href="{{ url }}"><span class="hash">#</span>{{ title }}</a>
+            </li>
+        {{ /tags }}
+    </ul>
+</section>

@@ -1,0 +1,208 @@
+:root {
+    --site-title-font-size: var(--font-size-4);
+    --site-inset: var(--size-px-4);
+    --content-inset: var(--size-px-4);
+}
+
+
+.site-background {
+    position: fixed;
+    inset: 0;
+    background-image: var(--site-background-image);
+    background-size: cover;
+    background-position: top;
+    z-index: var(--layer-1);
+}
+
+.site {
+    position: relative;
+    z-index: var(--layer-1);
+
+    .site-sidebar {
+        padding: var(--site-inset);
+        padding-bottom: 0;
+        text-align: center;
+
+        * {
+            max-inline-size: unset;
+        }
+
+        .site-title {
+            margin: 0;
+            display: block;
+            font-family: var(--font-heading);
+            font-size: var(--site-title-font-size);
+            font-weight: var(--font-weight-6);
+            line-height: var(--font-lineheight-1);
+            text-wrap: balance;
+        }
+
+        .portrait-wrapper {
+            overflow: hidden;
+
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                margin: calc(var(--site-inset) * -1);
+                margin-bottom: var(--site-inset);
+            }
+
+            .portrait {
+                width: 100%;
+            }
+        }
+
+        .tagline {
+            margin-top: var(--size-2);
+        }
+
+        .site-nav {
+            margin: var(--size-2) 0;
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    padding: 0;
+                    text-decoration: underline;
+
+                    a {
+                        display: inline-flex;
+                        align-items: start;
+                        gap: var(--size-2);
+                        transition: all 0.1s ease-in-out;
+
+
+                        svg {
+                            width: var(--size-5);
+                        }
+
+                        .label {
+                            display: block;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            transform: scale(1.2) skew(2deg, -2deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .site-links {
+
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: var(--size-3);
+                padding: var(--size-2) 0;
+
+                li {
+                    padding: 0;
+
+                    a {
+                        display: inline-block;
+                        transition: all 0.1s ease-in-out;
+
+                        svg {
+                            width: var(--size-5);
+                        }
+
+                        &:hover,
+                        &:focus {
+                            transform: scale(1.2) skew(10deg, -10deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: var(--size-2);
+
+            .carbonbadge {
+                margin-top: var(--size-2);
+                text-align: left;
+                font-size: var(--font-size-0) !important;
+            }
+        }
+    }
+
+    .site-content {
+        padding: var(--site-inset);
+    }
+}
+
+
+@media (--md-n-above) {
+    :root {
+        --sidebar-width: var(--size-px-13);
+        --site-inset: var(--size-px-8);
+    }
+
+    .site {
+
+        .site-sidebar {
+            text-align: left;
+            position: fixed;
+            width: var(--sidebar-width);
+            inset: var(--site-inset) 0 0 var(--site-inset);
+            padding: 0;
+
+            .portrait-wrapper {
+                border: var(--border-size-3) solid;
+                border-radius: var(--radius-drawn-1);
+
+                &.desktop {
+                    margin-top: var(--size-3);
+                    display: inline-block;
+                }
+
+                &.mobile {
+                    display: none;
+                }
+            }
+
+            .site-links {
+
+                ul {
+                    justify-content: start;
+                }
+            }
+
+        footer {
+
+            .carbonbadge {
+
+                #wcb_p {
+                    text-align: left;
+                }
+
+                #wcb_2 {
+                    text-align: left !important;
+                    display: block !important;
+                }
+            }
+        }
+        }
+
+        .site-content {
+            margin-left: calc(var(--sidebar-width) + var(--site-inset));
+            padding-top: calc(var(--site-inset) - var(--size-5));
+        }
+
+    }
+}
+
+@media (--lg-n-above) {
+    :root {
+        --sidebar-width: var(--size-px-14);
+        --site-inset: var(--size-px-10);
+    }
+}

@@ -1,0 +1,39 @@
+@import "open-props/postcss/normalize/light";
+@import "./colours.css";
+@import "./fonts.css";
+@import "./layout.css";
+@import "./page.css";
+@import "./card.css";
+@import "./tags.css";
+
+body {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-4);
+    color: var(--text-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-6);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--text-base);
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: var(--indigo-8);
+        text-decoration-color: var(--indigo-8);
+    }
+}
+
+code {
+    font-family: var(--font-code) !important;
+}

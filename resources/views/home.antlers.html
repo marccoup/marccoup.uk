@@ -1,0 +1,8 @@
+<div class="cards home">
+    {{ collection:posts paginate="10" as="posts" sort="date:desc" }}
+        {{ posts }}
+            {{ partial:card }}
+        {{ /posts }}
+        {{ partial:pagination }}
+    {{ /collection:posts }}
+</div>

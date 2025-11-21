@@ -1,0 +1,64 @@
+<aside class="site-sidebar">
+    <div>
+
+            {{ if portrait_mobile }}
+                {{ glide:portrait_mobile width="1024" quality="70" }}
+                    <div class="portrait-wrapper mobile">
+                        <img class="portrait" src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}"
+                            height="{{ height }}">
+                    </div>
+                {{ /glide:portrait_mobile }}
+            {{ /if }}
+        <div>
+            {{ if current_template === 'home' }}
+                <h1 class="site-title">{{ global:site_name ?? site:name }}</h1>
+            {{ else }}
+                <div class="site-title">{{ global:site_name ?? site:name }}</div>
+            {{ /if }}
+            {{ if portrait_desktop }}
+                {{ glide:portrait_desktop width="512" quality="70" }}
+                    <div class="portrait-wrapper desktop">
+                        <img class="portrait" src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}"
+                            height="{{ height }}">
+                    </div>
+                {{ /glide:portrait_desktop }}
+            {{ /if }}
+
+            <p class="tagline">{{ tagline }}</p>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                {{ nav:main_nav }}
+                    <li>
+                        <a href="{{ url }}" title="{{ title }}">
+                            {{ svg src="{{ icon }}" aria-label="{{ title }}" role="img" }}
+                            {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
+                            <span class="label">{{ title }}</span>
+                        </a>
+                    </li>
+                {{ /nav:main_nav }}
+            </ul>
+        </nav>
+        <nav class="site-links">
+            <ul>
+                {{ links }}
+                    <li>
+                        <a href="{{ link }}" title="{{ label }}">
+                            {{ svg src="{{ icon }}" aria-label="{{ label }}" role="img" }}
+                            {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
+                        </a>
+                    </li>
+                {{ /links }}
+            </ul>
+        </nav>
+        <footer>
+            <p>Last updated {{ now format="jS F, Y" }}.</p>
+
+            {{ if environment === 'local'}}
+                <div id="wcb" class="carbonbadge"><style>#wcb.carbonbadge{--b1:#0e11a8;--b2:#00ffbc;font-size:15px;text-align:center;color:var(--b1);line-height:1.15}#wcb.carbonbadge sub{vertical-align:middle;position:relative;top:.3em;font-size:.7em}#wcb #wcb_2,#wcb #wcb_a,#wcb #wcb_g{display:inline-flex;justify-content:center;align-items:center;text-align:center;font-size:1em;line-height:1.15;font-family:-apple-system,BlinkMacSystemFont,sans-serif;text-decoration:none;margin:.2em 0}#wcb #wcb_a,#wcb #wcb_g{padding:.3em .5em;border:.13em solid var(--b2)}#wcb #wcb_g{border-radius:.3em 0 0 .3em;background:#fff;border-right:0;min-width:8.2em}#wcb #wcb_a{border-radius:0 .3em .3em 0;border-left:0;background:var(--b1);color:#fff;font-weight:700;border-color:var(--b1)}#wcb.wcb-d #wcb_a{color:var(--b1);background:var(--b2);border-color:var(--b2)}#wcb.wcb-d #wcb_2{color:#fff}</style><div id="wcb_p"><span id="wcb_g">Test badge</span><a id="wcb_a" target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><span id="wcb_2">&nbsp;This is just testing for styles locally</span></div>
+            {{ else }}
+                <div id="wcb" class="carbonbadge"></div>
+            {{ /if }}
+        </footer>
+    </div>
+</aside>

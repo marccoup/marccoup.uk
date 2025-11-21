@@ -1,0 +1,9 @@
+title: 'Post Types'
+data:
+  icons:
+    text_post: icons/tabler-file-text.svg
+    audio_post: icons/tabler-music.svg
+    link_post: icons/tabler-link.svg
+    photo_post: icons/tabler-photo.svg
+    quote_post: icons/tabler-blockquote.svg
+    video_post: icons/tabler-video.svg

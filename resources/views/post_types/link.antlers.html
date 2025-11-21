@@ -1,0 +1,6 @@
+<a href="{{ link_url }}">
+    {{ if link_url | scrape('og_image') }}
+        <img src="{{ link_url | scrape('og_image') }}" alt="{{ link_url | scrape('title') }}" width="512" class="og-image">
+    {{ /if }}
+    <h2>{{ title | widont }}</h2>
+</a>

@@ -1,0 +1,16 @@
+:root {
+    --page-title-font-size: var(--font-size-6);
+}
+
+.page-header {
+    margin-bottom: var(--size-4);
+
+    .page-title {
+        font-size: var(--page-title-font-size);
+        max-inline-size: unset;
+
+        .hash {
+            color: var(--text-accent);
+        }
+    }
+}

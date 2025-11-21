@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title ?? site:name }} | marccoup.uk</title>
+    <meta name="description" content="{{ seo_description ?? global:tagline }}">
+    <meta property="og:title" content="{{ title ?? site:name }}">
+    <meta property="og:site_name" content="{{ site_name ?? config:app:name }}">
+    <meta property="og:locale" content="{{ site:locale }}">
+    <meta property="og:description" content="{{ seo_description ?? caption | strip_tags ?? global:tagline }}">
+
+    <link rel="sitemap" href="/sitemap.xml" type="application/xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Marcus">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    {{ if environment !== 'local' }}
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    {{ /if }}
+    <style>
+        :root {
+            --site-background-image: url({{ config.app.url }}{{ site_background }});
+            --card-background-image: url({{ config.app.url }}{{ card_background }});
+        }
+    </style>
+    {{ vite src="resources/css/style.css" }}
+</head>
+<body>
+    <div class="site-background"></div>
+    <div class="site">
+        {{ partial:aside }}
+        <div class="site-content">
+            {{ template_content }}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: icons
+            field:
+              type: group
+              display: Icons
+              fields:
+                -
+                  handle: text_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Text Post'
+                    validate:
+                      - required
+                    width: 33
+                -
+                  handle: audio_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Audio Post'
+                    validate:
+                      - required
+                    width: 33
+                -
+                  handle: link_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Link Post Icon'
+                    validate:
+                      - required
+                    width: 33
+                -
+                  handle: photo_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Photo Post'
+                    validate:
+                      - required
+                    width: 33
+                -
+                  handle: quote_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Quote Post'
+                    validate:
+                      - required
+                    width: 33
+                -
+                  handle: video_post
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    type: assets
+                    display: 'Video Post'
+                    validate:
+                      - required
+                    width: 33

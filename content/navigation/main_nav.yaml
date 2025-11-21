@@ -1,0 +1,5 @@
+title: 'Main Nav'
+collections:
+  - pages
+  - posts
+max_depth: 1

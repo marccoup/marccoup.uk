@@ -1,0 +1,22 @@
+title: Global
+data:
+  site_name: 'Marcus Coupland'
+  portrait_desktop: portrait.jpg
+  portrait_mobile: img_0212-crop-123.png
+  tagline: 'huh?'
+  links:
+    -
+      id: mi4h7q9j
+      label: Email
+      link: 'mailto:marc@marccoup.uk'
+      icon: icons/tabler-mail.svg
+    -
+      id: mi4hdobv
+      icon: icons/tabler-brand-git.svg
+      label: Git
+      link: 'https://git.marccoup.uk'
+    -
+      id: mi4hofwj
+      label: RSS
+      link: /feed.xml
+      icon: icons/tabler-rss.svg

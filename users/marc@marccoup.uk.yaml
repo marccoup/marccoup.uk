@@ -1,0 +1,16 @@
+name: 'Marcus Coupland'
+super: true
+avatar: portrait.jpg
+id: d96be693-b8e0-4800-8b51-3392c1c850ac
+password_hash: $2y$12$faLUxn.JUadLpztx.CE.G.xaDVBfvx3t6dPGYRvysXqgyZJESgJcC
+preferences:
+  assets:
+    assets:
+      mode: grid
+  nav:
+    content:
+      reorder:
+        - 'content::collections::posts'
+      items:
+        'content::collections::posts': '@move'
+        'content::collections': '@hide'

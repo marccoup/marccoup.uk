@@ -1,0 +1,16 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: icon
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              folder: icons
+              type: assets
+              display: Icon
+              show_set_alt: false

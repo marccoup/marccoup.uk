@@ -1,0 +1,83 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: site_name
+            field:
+              display: 'Site Name'
+              type: text
+          -
+            handle: portrait_desktop
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Portrait Desktop'
+              width: 50
+          -
+            handle: portrait_mobile
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Portrait Mobile'
+              width: 50
+          -
+            handle: tagline
+            field:
+              display: Tagline
+              type: textarea
+          -
+            handle: site_background
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Site Background'
+              folder: textures
+          -
+            handle: card_background
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Card Background'
+              folder: textures
+          -
+            handle: links
+            field:
+              type: grid
+              display: Links
+              mode: stacked
+              fields:
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    folder: icons
+                    show_set_alt: false
+                    type: assets
+                    display: Icon
+                    validate:
+                      - required
+                    width: 50
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                    validate:
+                      - required
+                    width: 50
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    validate:
+                      - required

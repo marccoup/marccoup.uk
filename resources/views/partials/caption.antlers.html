@@ -1,0 +1,13 @@
+<div class="px-4 mx-2 py-6 space-y-4 z-10 relative overflow-hidden">
+    <div class="max-w-16 border-t-2 border-neutral-900"></div>
+    <div class="prose prose-neutral prose-sm prose-a:text-indigo-800 prose-a:underline">
+        {{ caption }}
+    </div>
+    {{ if tags }}
+    <div class="flex flex-wrap text-sm">
+        {{ tags }}
+            <a href="{{ url }}" class="text-neutral-900 mr-3 hover:text-indigo-300"><span class="text-neutral-600">#</span>{{ title }}</a>
+        {{ /tags }}
+    </div>
+    {{ /if }}
+</div>

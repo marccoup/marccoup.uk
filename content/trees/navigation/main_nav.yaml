@@ -1,0 +1,13 @@
+tree:
+  -
+    id: 3b32b6b6-93c1-4e5d-b695-52fd0a38f045
+    entry: c459c5b5-5eb6-4775-993f-8262a4b22179
+    title: 'Where the heart is'
+    data:
+      icon: icons/tabler-home-heart.svg
+  -
+    id: c1cb947f-0def-46bc-919f-d68ce907fca1
+    title: Tags!
+    url: /posts/tags
+    data:
+      icon: icons/tabler-tags.svg

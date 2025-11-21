@@ -1,0 +1,9 @@
+title: Generic
+fields:
+  -
+    handle: caption
+    field:
+      automatic_links: true
+      display: Caption
+      type: markdown
+      instructions: 'Say something about the main post.'

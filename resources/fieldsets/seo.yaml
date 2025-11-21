@@ -1,0 +1,7 @@
+title: SEO
+fields:
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: SEO Description
