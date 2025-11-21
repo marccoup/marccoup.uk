@@ -19,6 +19,21 @@
     border: var(--border-size-3) solid;
     max-width: 800px;
 
+    &.card-single {
+        border: 0;
+        box-shadow: none;
+        border-radius: unset !important;
+        overflow: unset !important;
+
+        .card-meta {
+            padding: 0;
+        }
+
+        .content {
+            padding: 0 0 var(--size-4) 0;
+        }
+    }
+
     &:nth-of-type(odd) {
         border-radius: var(--radius-drawn-4);
     }
@@ -67,6 +82,7 @@
     }
 
     .post-title {
+        font-size: var(--font-size-4);
         margin-bottom: var(--size-3);
     }
 
@@ -75,8 +91,20 @@
     ol,
     dl,
     h6 {
-        font-size: var(--font-size-3);
+        font-size: var(--font-size-1);
     }
+
+    ul,
+    ol {
+        margin-left: var(--size-4);
+        padding-left: var(--size-px-2);
+
+        ul,
+        ol {
+            margin-left: 0;
+        }
+    }
+
 
     p {
         margin: var(--size-2) 0;
@@ -122,5 +150,18 @@
         margin-top: var(--size-2);
         font-size: var(--font-size-3);
         max-inline-size: unset;
+    }
+}
+
+@media (--md-n-above) {
+    .card {
+
+        p,
+        ul,
+        ol,
+        dl,
+        h6 {
+            font-size: var(--font-size-3);
+        }
     }
 }
