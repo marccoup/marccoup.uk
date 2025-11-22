@@ -104,6 +104,10 @@
         }
     }
 
+    hr {
+        margin-block: var(--size-6);
+    }
+
 
     p {
         margin: var(--size-2) 0;
