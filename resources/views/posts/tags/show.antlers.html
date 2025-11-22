@@ -1,10 +1,14 @@
-
 <section class="page-header">
     <h1 class="page-title"><span class="hash">#</span>{{ title }}</h1>
 </section>
 
 <div class="cards">
-    {{ entries sort="date:desc" }}
-        {{ partial:card }}
-    {{ /entries }}
+    {{ if (entries | count) > 0 }}
+        {{ entries sort="date:desc" paginate="5" }}
+            {{ results }}
+                {{ partial:card }}
+            {{ /results }}
+            {{ partial:pagination }}
+        {{ /entries }}
+    {{ /if }}
 </div>

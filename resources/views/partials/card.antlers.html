@@ -1,11 +1,14 @@
-<div class="card card-{{ blueprint }} {{ current_template === 'default' ? 'card-single' : 'card-archive' }}">
+<div class="card card-{{ $blueprint }} {{ current_template === 'default' ? 'card-single' : 'card-archive' }}">
     <div class="card-meta">
         <a class="type" href="{{$ route('posts.type', $blueprint) $}}">
             {{ svg src="{{ post_types:icons.{'{blueprint}_post'} }}" }}
             <span class="type-label">{{ $blueprint | ucfirst }}</span>
         </a>
-        <a class="post" href="{{ url }}">
+        <span class="post">
             {{ date format="M j" }}
+        </span>
+        <a class="post" href="{{ url }}">
+            Permalink
         </a>
     </div>
     <div class="card-content">

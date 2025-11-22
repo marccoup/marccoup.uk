@@ -1,6 +1,12 @@
 <div>
-    {{ if current_template != "default" }}
+    {{ if current_template !== "default" }}
         <h2 class="post-title"><a href="{{ url }}">{{ title }}</a></h2>
+        {{ content | excerpt ?? content }}
+
+        <div class="read-more">
+            <a href="{{ url }}">Read more</a>
+        </div>
+    {{ else }}
+        {{ content }}
     {{ /if }}
-    {{ content }}
 </div>

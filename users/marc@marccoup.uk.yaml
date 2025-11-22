@@ -13,4 +13,10 @@ preferences:
         - 'content::collections::posts'
       items:
         'content::collections::posts': '@move'
+        'content::collections::pages': '@move'
         'content::collections': '@hide'
+  collections:
+    posts:
+      after_save: continue_editing
+    pages:
+      after_save: continue_editing

@@ -11,3 +11,13 @@ tree:
     url: /posts/tags
     data:
       icon: icons/tabler-tags.svg
+  -
+    id: b4021fe6-fa10-4666-8278-d2583f5c1e39
+    entry: dfd18c01-f9c8-496d-b27b-ed69d9c65444
+    data:
+      icon: icons/tabler-calendar-clock.svg
+  -
+    id: c457f93e-56fc-4295-8f7c-09ad8c2fa369
+    entry: ef1053a3-be7c-468b-86d4-37d6ea169c75
+    data:
+      icon: icons/tabler-hammer.svg
