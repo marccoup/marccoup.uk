@@ -125,17 +125,29 @@
         border-top: var(--border-size-3) solid var(--text-base);
         padding: var(--size-3) var(--size-4) var(--size-6);
     }
+
+    blockquote {
+        border-left: var(--border-size-3) solid;
+        border-radius: var(--radius-drawn-4);
+        max-inline-size: unset;
+
+        p {
+            margin: 0;
+        }
+
+        cite {
+            padding: 0;
+            border: 0;
+        }
+    }
 }
 
 .card-quote {
 
     blockquote {
-        border-left: var(--border-size-3) solid;
-        border-radius: var(--radius-drawn-4);
         font-size: var(--font-size-5);
 
         p {
-            margin: 0;
             font-size: var(--font-size-5);
         }
 
