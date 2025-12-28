@@ -3,8 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use League\CommonMark\Extension\Footnote\FootnoteExtension;
 use Statamic\Entries\Entry;
-use Statamic\Statamic;
+use Statamic\Facades\Markdown;
 use Statamic\StaticSite\SSG;
 
 class AppServiceProvider extends ServiceProvider
