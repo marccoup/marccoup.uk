@@ -4,13 +4,13 @@ blueprint: page
 title: Uses
 seo_description: 'What I uses :D'
 updated_by: d96be693-b8e0-4800-8b51-3392c1c850ac
-updated_at: 1764195853
+updated_at: 1770888252
 ---
 What I use(s):
 
 - [Hetzner](https://www.hetzner.com/)
 - [Coolify](https://coolify.io/)
-- [Forgejo](https://forgejo.org/)
+- [Forgejo](https://forgejo.org/)	
 	- [My instance](https://git.marccoup.uk) - (readonly for you!)
 	- This is recent, I've moved away from GitHub. <i>[#de-corp](/posts/tags/de-corp)</i>
 - [FreshRSS](https://freshrss.org/)
@@ -19,10 +19,9 @@ What I use(s):
 - [Statamic](https://statamic.com/) (this site!)
 - [YNAB](https://www.ynab.com/)
 	- [Read about why!](/posts/is-actual-budget-actually-better)
+- [Neovim](https://neovim.io/)
+- [PHPStorm](https://www.jetbrains.com/phpstorm/)
+- [TickTick](https://ticktick.com)
 - A MacBook Pro (For work)
-- An old ASUS laptop with Arch (For personal)
 - A tower PC with Windows (For game)
-- Nvim
-- PHPStorm
-- Todoist
-	- Want to switch to some self hosted CalDAV server and something like tasks.org but my partner has an iPhone, so it's tricky!
+- A Nintendo Switch 1 (For game as well)
