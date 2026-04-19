@@ -1,8 +1,39 @@
-<div class="cards home">
-    {{ collection:posts paginate="10" as="posts" sort="date:desc" }}
-        {{ posts }}
+<div class="home-section">
+    <div class="section-header">
+        <h2>Photos</h2>
+        <a class="view-all" href="/posts/type/photo">View all →</a>
+    </div>
+    <div class="photo-grid">
+        {{ collection:posts blueprint:is="photo" sort="date:desc" limit="12" }}
+            <div class="photo-grid__item">
+                {{ photo limit="1" }}
+                    <a href="{{ url }}" class="glightbox photo-grid__cover" data-gallery="gallery-{{ slug }}" data-description="{{ alt ?? title }}">
+                        {{ glide :src="url" width="600" quality="70" }}
+                            <img src="{{ url }}" alt="{{ alt ?? title }}" loading="lazy">
+                        {{ /glide }}
+                    </a>
+                {{ /photo }}
+                {{# Hidden lightbox items for photos 2+ #}}
+                {{ photo offset="1" }}
+                    <a href="{{ url }}" class="glightbox photo-card__hidden-item" data-gallery="gallery-{{ slug }}" data-description="{{ alt ?? title }}" aria-hidden="true" tabindex="-1"></a>
+                {{ /photo }}
+                <span class="photo-grid__overlay">
+                    {{ if title }}<span class="photo-grid__title">{{ title }}</span>{{ /if }}
+                    <span class="photo-grid__date">{{ date format="M j, Y" }}</span>
+                </span>
+            </div>
+        {{ /collection:posts }}
+    </div>
+</div>
+
+<div class="home-section">
+    <div class="section-header">
+        <h2>Recently</h2>
+        <a class="view-all" href="/writing">View all →</a>
+    </div>
+    <div class="cards">
+        {{ collection:posts blueprint:isnt="photo" sort="date:desc" limit="5" }}
             {{ partial:card }}
-        {{ /posts }}
-        {{ partial:pagination }}
-    {{ /collection:posts }}
+        {{ /collection:posts }}
+    </div>
 </div>

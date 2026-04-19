@@ -1,5 +1,28 @@
-<a href="{{ url }}">
-    {{ glide:photo width="1024" quality="70" }}
-        <img src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}" height="{{ height }}">
-    {{ /glide:photo }}
-</a>
+{{ if current_template === 'default' }}
+    {{# Detail view: full gallery grid #}}
+    <div class="photo-gallery">
+        {{ photo }}
+            <a href="{{ url }}" class="glightbox photo-gallery__item" data-gallery="gallery-{{ slug }}" data-description="{{ alt ?? title }}">
+                {{ glide :src="url" width="1200" quality="80" }}
+                    <img src="{{ url }}" alt="{{ alt ?? title }}" loading="lazy">
+                {{ /glide }}
+            </a>
+        {{ /photo }}
+    </div>
+{{ else }}
+    {{# Card/archive view: first photo #}}
+    {{ photo limit="1" }}
+        <a href="{{ url }}" class="glightbox photo-card__cover" data-gallery="gallery-{{ slug }}" data-description="{{ alt ?? title }}">
+            {{ glide :src="url" width="800" quality="70" }}
+                <img src="{{ url }}" alt="{{ alt ?? title }}" loading="lazy">
+            {{ /glide }}
+        </a>
+    {{ /photo }}
+    {{# Hidden lightbox items for photos 2+ so gallery paging works #}}
+    {{ photo offset="1" }}
+        <a href="{{ url }}" class="glightbox photo-card__hidden-item" data-gallery="gallery-{{ slug }}" data-description="{{ alt ?? title }}" aria-hidden="true" tabindex="-1"></a>
+    {{ /photo }}
+    {{ if photo | length > 1 }}
+        <span class="photo-card__count">1 / {{ photo | length }}</span>
+    {{ /if }}
+{{ /if }}

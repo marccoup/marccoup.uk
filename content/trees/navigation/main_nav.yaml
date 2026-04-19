@@ -6,6 +6,18 @@ tree:
     data:
       icon: icons/tabler-home-heart.svg
   -
+    id: f7a8b9c0-d1e2-4f3a-b4c5-d6e7f8a9b0c1
+    title: Photos
+    url: /posts/type/photo
+    data:
+      icon: icons/tabler-photo.svg
+  -
+    id: e2d3c4b5-a6f7-4e8d-9c0b-1a2b3c4d5e6f
+    entry: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+    title: Writing
+    data:
+      icon: icons/tabler-file-text.svg
+  -
     id: c1cb947f-0def-46bc-919f-d68ce907fca1
     title: Tags!
     url: /posts/tags

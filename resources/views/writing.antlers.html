@@ -1,0 +1,12 @@
+<section class="page-header">
+    <h1 class="page-title">Writing</h1>
+</section>
+
+<div class="cards">
+    {{ collection:posts blueprint:isnt="photo" paginate="20" as="posts" sort="date:desc" }}
+        {{ posts }}
+            {{ partial:card }}
+        {{ /posts }}
+        {{ partial:pagination }}
+    {{ /collection:posts }}
+</div>

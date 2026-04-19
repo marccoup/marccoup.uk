@@ -5,6 +5,8 @@
 @import "./page.css";
 @import "./card.css";
 @import "./tags.css";
+@import "./photo-grid.css";
+@import "glightbox/dist/css/glightbox.css";
 
 body {
     font-family: var(--font-body);
