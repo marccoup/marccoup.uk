@@ -1,0 +1,47 @@
+---
+name: Build and deploy Statamic static site
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: npm i
+      - run: npm run build
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          tools: composer
+      - run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - run: php please key:generate
+      - run: php please ssg:generate
+        env:
+          APP_URL: https://marccoup.uk
+          APP_NAME: "Marcus Coupland"
+          APP_ENV: production
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: storage/app/static
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
