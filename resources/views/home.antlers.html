@@ -1,8 +1,26 @@
-<div class="cards home">
-    {{ collection:posts paginate="10" as="posts" sort="date:desc" }}
-        {{ posts }}
-            {{ partial:card }}
-        {{ /posts }}
-        {{ partial:pagination }}
-    {{ /collection:posts }}
-</div>
+<section class="home-section">
+    <header class="page-header">
+        <h1 class="page-title">Photo Portfolio</h1>
+    </header>
+    <div class="cards home photos">
+        {{ collection:posts blueprint:is="photo" as="photos" sort="date:desc" limit="12" }}
+            {{ photos }}
+                {{ partial:card }}
+            {{ /photos }}
+        {{ /collection:posts }}
+    </div>
+</section>
+
+<section class="home-section">
+    <header class="page-header">
+        <h2 class="page-title">Latest Posts</h2>
+    </header>
+    <div class="cards home">
+        {{ collection:posts paginate="10" as="posts" sort="date:desc" }}
+            {{ posts }}
+                {{ partial:card }}
+            {{ /posts }}
+            {{ partial:pagination }}
+        {{ /collection:posts }}
+    </div>
+</section>

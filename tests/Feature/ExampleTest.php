@@ -15,5 +15,7 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+        $response->assertSeeText('Photo Portfolio');
+        $response->assertSeeText('Latest Posts');
     }
 }

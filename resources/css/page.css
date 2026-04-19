@@ -14,3 +14,7 @@
         }
     }
 }
+
+.home-section + .home-section {
+    margin-top: var(--size-8);
+}
