@@ -136,14 +136,6 @@
                 font-size: var(--font-size-0) !important;
             }
 
-            .umami {
-                margin-top: var(--size-2);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: var(--size-2);
-            }
-
             .green-web-badge {
                 display: block;
                 margin-top: var(--size-2);
@@ -219,10 +211,6 @@
                         text-align: left !important;
                         display: block !important;
                     }
-                }
-
-                .umami {
-                    justify-content: start;
                 }
 
                 .green-web-badge {
