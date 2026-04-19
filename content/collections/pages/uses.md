@@ -8,20 +8,14 @@ updated_at: 1770888252
 ---
 What I use(s):
 
-- [Hetzner](https://www.hetzner.com/)
-- [Coolify](https://coolify.io/)
-- [Forgejo](https://forgejo.org/)	
-	- [My instance](https://git.marccoup.uk) - (readonly for you!)
-	- This is recent, I've moved away from GitHub. <i>[#de-corp](/posts/tags/de-corp)</i>
-- [FreshRSS](https://freshrss.org/)
-- [FeedFlow](https://www.feedflow.dev/)
-- [Mealie](https://mealie.io/)
 - [Statamic](https://statamic.com/) (this site!)
 - [YNAB](https://www.ynab.com/)
 	- [Read about why!](/posts/is-actual-budget-actually-better)
 - [Neovim](https://neovim.io/)
 - [PHPStorm](https://www.jetbrains.com/phpstorm/)
+- [VSCode](https://code.visualstudio.com/)
 - [TickTick](https://ticktick.com)
 - A MacBook Pro (For work)
 - A tower PC with Windows (For game)
 - A Nintendo Switch 1 (For game as well)
+- A £35 unknown brand hand-propelled lawn mower (for garden)
