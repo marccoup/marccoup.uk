@@ -1,17 +1,17 @@
 {{ if photo }}
     {{ if current_template === "default" }}
         <div class="photo-gallery">
-            {{ glide:photo width="1280" quality="75" }}
+            {{ photo }}
                 <a href="{{ url }}" class="photo-gallery-item">
-                    <img src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}" height="{{ height }}">
+                    <img src="{{ url }}" alt="{{ alt ?? title }}">
                 </a>
-            {{ /glide:photo }}
+            {{ /photo }}
         </div>
     {{ else }}
-        <a href="{{ url }}">
-            {{ glide:photo width="1024" quality="70" limit="1" }}
-                <img src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}" height="{{ height }}">
-            {{ /glide:photo }}
-        </a>
+        {{ photo limit="1" }}
+            <a href="{{ url }}">
+                <img src="{{ url }}" alt="{{ alt ?? title }}">
+            </a>
+        {{ /photo }}
     {{ /if }}
 {{ /if }}
