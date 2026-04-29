@@ -1,6 +1,5 @@
 <aside class="site-sidebar">
     <div>
-
             {{ if portrait_mobile }}
                 {{ glide:portrait_mobile width="1024" quality="70" }}
                     <div class="portrait-wrapper mobile">
@@ -26,31 +25,33 @@
 
             <p class="tagline">{{ tagline }}</p>
         </div>
-        <nav class="site-nav">
-            <ul>
-                {{ nav:main_nav }}
-                    <li>
-                        <a href="{{ url }}" title="{{ title }}">
-                            {{ svg src="{{ icon }}" aria-label="{{ title }}" role="img" }}
-                            {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
-                            <span class="label">{{ title }}</span>
-                        </a>
-                    </li>
-                {{ /nav:main_nav }}
-            </ul>
-        </nav>
-        <nav class="site-links">
-            <ul>
-                {{ links }}
-                    <li>
-                        <a href="{{ link }}" title="{{ label }}">
-                            {{ svg src="{{ icon }}" aria-label="{{ label }}" role="img" }}
-                            {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
-                        </a>
-                    </li>
-                {{ /links }}
-            </ul>
-        </nav>
+        <div class="site-nav-and-links">
+            <nav class="site-nav">
+                <ul>
+                    {{ nav:main_nav }}
+                        <li>
+                            <a href="{{ url }}" title="{{ title }}">
+                                {{ svg src="{{ icon }}" aria-label="{{ title }}" role="img" }}
+                                {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
+                                <span class="label">{{ title }}</span>
+                            </a>
+                        </li>
+                    {{ /nav:main_nav }}
+                </ul>
+            </nav>
+            <nav class="site-links">
+                <ul>
+                    {{ links }}
+                        <li>
+                            <a href="{{ link }}" title="{{ label }}">
+                                {{ svg src="{{ icon }}" aria-label="{{ label }}" role="img" }}
+                                {{ ' ' ?? 'Keeps code layout on reformat in vscode for some reason...' }}
+                            </a>
+                        </li>
+                    {{ /links }}
+                </ul>
+            </nav>
+        </div>
         <footer>
             <p>Last updated {{ now format="jS F, Y" }}.</p>
 
