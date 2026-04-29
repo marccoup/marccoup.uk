@@ -1,5 +1,17 @@
-<a href="{{ url }}">
-    {{ glide:photo width="1024" quality="70" }}
-        <img src="{{ url }}" alt="{{ alt ?? title }}" width="{{ width }}" height="{{ height }}">
-    {{ /glide:photo }}
-</a>
+{{ if photo }}
+    {{ if current_template === "default" }}
+        <div class="photo-gallery">
+            {{ photo }}
+                <a href="{{ url }}" class="photo-gallery-item">
+                    <img src="{{ url }}" alt="{{ alt ?? title }}">
+                </a>
+            {{ /photo }}
+        </div>
+    {{ else }}
+        {{ photo limit="1" }}
+            <a href="{{ url }}">
+                <img src="{{ url }}" alt="{{ alt ?? title }}">
+            </a>
+        {{ /photo }}
+    {{ /if }}
+{{ /if }}
