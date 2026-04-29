@@ -1,5 +1,5 @@
 <div class="cards home">
-    {{ collection:posts paginate="4" as="posts" sort="date:desc" }}
+    {{ collection:posts paginate="10" as="posts" sort="date:desc" }}
         {{ posts }}
             {{ partial:card }}
         {{ /posts }}
